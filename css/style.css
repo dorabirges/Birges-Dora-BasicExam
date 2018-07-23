@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Regular.ttf')
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Bold.ttf');
+    font-weight: bold;
+}
+body {
+    font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
+}
+.content {
+    background-image: url('/assets/site/mapblue.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.sidebar {
+    background-color: #555;
+}
+.sidebar-content {
+    padding: 10px;
+    color: #fff;
+}
+.character {
+    width: 12.5%;
+    box-sizing: border-box;
+    height: 110px;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.8em;
+}
+.character img {
+    height: 50px;
+}
+@media(max-width:900px) {
+    .logo {
+        width: 100px;
+    }
+    .picture {
+        width: 300px;
+        display: block;
+    }
+    .content:after, .sidebar:after, .search-div:after{
+        content: '';
+        clear: both;
+        display: table;
+    }
+}
+@media(min-width:900px) {
+    .content {
+        width: calc(100% - 300px);
+        left: 0;
+        overflow: auto;
+    }
+    .sidebar {
+        width: 300px;
+        right: 0;
+    }
+    .content, .sidebar {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+    .sidebar-content, .sidebar-search {
+        position: absolute;
+        right: 0;
+        left: 0;
+    }
+    .sidebar-content {
+        height: calc(100% - 100px);
+        top: 0px;
+    }
+    .sidebar-search {
+        height: 60px;
+        bottom: 0;
+    }
+    .logo {
+        height: 50px;
+        margin: 0 auto;
+        display: block;
+    }
+    .picture {
+        width: 100%;
+    }
+}
+.character p:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+.picture {
+    float: left;
+}
+.house {
+    float: right;
+}
+.bio {
+    clear: both;
+    text-align: justify;
+}
+.search-div {
+    margin: 0 5px;
+}
+.search-text {
+    width: 100%;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 30px;
+    height: 35px;
+}
+.fa-search {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px;
+    color: #b0b0b0;
+}
+.text-field-with-icon {
+    width: 80%;
+    position: relative;
+    float: right;
+}
+.submit-button {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+.button-with-icon {
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    border: 1px solid white;
+    background-color: #444;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    color: white;
+    text-align: center;
+}
