@@ -1,0 +1,33 @@
+﻿1.	Készíts egy adatbázist got névvel! Az engine legyen InnoDB.
+2.	Készíts egy táblát characters névvel!
+3.	A táblában a következő adatokat kell letárolni az egyes szereplőkről:
+•	Azonosító: ahogy szoktuk	
+•	Név: a karakter neve 
+•	Becenév: Véreb, Kisujj stb.
+•	Halott-e: meghalt-e már
+•	Portrékép: egy kép ÚTVONALA a csinos, vagy kevésbé csinos arcukról 
+•	Kép: egy kép ÚTVONALA a filmből
+•	Történet: a karakter rövid biográfiája
+•	Ház: azaz hogy melyik nemesi házhoz tartozik
+•	Szervezet: azaz hogy melyik házhoz tartozik
+Az adatok típusát te választod meg.
+Az azonosító, név, Portrékép, Kép kötelező adat.
+A többi megszorítás rád van bízva.
+
+
+CREATE DATABASE IF NOT EXISTS got
+  CHARACTER SET utf8
+  COLLATE utf8_general_ci;
+
+CREATE TABLE characters (
+    `id` int PRIMARY KEY AUTO_INCREMENT, 
+    `dead` varchar(5), 
+    `name` varchar(100) NOT NULL, 
+    `alias` varchar(100), 
+    `portrait` varchar(255) NOT NULL, 
+    `picture` varchar(255) NOT NULL, 
+    `bio` longtext, 
+    `organization` varchar(255), 
+    `house` varchar(255)
+    )
+     ENGINE=InnoDB;
